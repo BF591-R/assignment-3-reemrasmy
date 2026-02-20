@@ -234,4 +234,13 @@ this plot.
 library(ggplot2)
 
 
+ggplot(long_format_data, aes(x = gene_set, y = value, fill = gene_set)) +
+  geom_boxplot() +
+  labs(
+    title = "Expression Distribution of Good vs Bad Gene Sets",
+    x = "Gene Set",
+    y = "Expression Level"
+  ) +
+  theme_minimal() +
+  theme(legend.position = "none")
 ```
